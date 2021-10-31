@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Battambang:wght@100;300&family=Gowun+Batang:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+nav{
+    width: 100%;
+    padding: 1rem 4rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 9.99;
+    background-color: aliceblue;
+}
+nav .logo{
+    font-size: 200%;
+}
+nav .logo span{
+    color: green; font-size: 100%;
+    margin-top: 1rem;
+}
+#check,.checkbtn{display: none;}
+
+nav ul,.sign-up,.checkbtn{
+    float: right;
+    margin-top: -1.6rem;
+    font-size: large;
+}
+nav ul{
+    margin-right: 20%;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 4rem;
+}
+nav ul li a:hover{
+    color: green;
+}
+/* ------ home contianer ------------ */
+.contianer,.contianer-card{
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+.contianer .card-content{
+    text-align: center; 
+    padding: 5rem 0;
+}
+.contianer-card .card-content{
+    text-align: center;
+    padding: 2rem 0;
+}
+.card-content h1{
+    font-size: 300%;
+    line-height: 6rem;
+}
+.card-image img{
+    border-radius: 10rem 10rem 0 0 ;
+}
+button{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+.green-bkg{
+    background-color: green;
+    color: white;
+}
+h1{
+    text-align: center;
+}
+h4{
+    line-height: 2rem;
+}
+/* --------- .contianer-card and card-img ------ */
+.card-img{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin: 0.5rem;
+}
+.card-img:hover{
+    cursor: pointer;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.contianer-card p{
+    line-height: 2rem;
+    width: 60%;
+    margin: auto;
+    text-align: start;
+}
+.cicle-icon{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.card-content h2{
+    line-height: 4rem;
+}
+h3{
+    text-align: center;
+}
+/* ------ card-idia ---------- */
+.card-idia{
+    margin-top: 5rem;
+    margin: 0.5rem;
+    background-color: rgba(36, 112, 36, 0.123);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.card-idia strong{
+    position: relative;
+    font-size: 500%;
+    top: -22%;
+    left: 40%;
+    color: green;
+}
+.card-idia p{
+    line-height: 2rem;
+}
+/* -------- footer --------- */
+footer{
+    background-color: rgb(5, 80, 5);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 4rem;
+}
+footer .card-ft{
+    width: 30%;
+}
+ol li a{
+    color: white;
+}
+ol li a:hover{
+    border-bottom: 2px solid #000;
+    cursor: pointer;
+}
+footer h2,ol li, p{
+    line-height: 2rem;
+    padding: 0.4rem;
+}
+footer h2 span{
+    color: black;
+}
+@media(max-width: 700px){
+    nav{
+        width: 100%;
+        padding: 1rem;
+    }
+    nav .logo{
+        font-size: 150%;
+    }
+    nav ul{
+        width: 100%;
+        position: fixed;
+        top: 15%;
+        left: -100%;
+        transition: all 1s;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.795);
+    }
+    nav ul li{
+        display: block;
+        line-height: 2rem;
+    }
+    nav ul li a{color: white;}
+    nav ul li a:hover{
+        border-bottom: 2px solid green;
+        transition: all 0.5s;
+    }
+    .checkbtn, .sign-up{
+        display: block;
+        font-size: smaller;
+    }
+    .checkbtn{
+        margin-right: 6rem;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .contianer{
+        margin-top: 6rem;
+        flex-wrap: wrap-reverse;
+    }
+    .contianer-card{
+        flex-wrap: wrap;
+    }
+    .card-content p{
+        width: 100%;
+    }
+    .card-img, .card-idia{
+        width: 100%;
+        margin:1rem auto;
+    }
+    /* --------- footer --------- */
+    footer{
+        flex-wrap: wrap;
+    }
+    footer .card-ft{
+        width: 100%;
+    }
+}
